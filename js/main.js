@@ -105,7 +105,7 @@
   ];
   var PREFIX = { 'aman': 'aman', 'org-mobile': 'org-mobile', 'superadmin-mobile': 'sa-mobile', 'org-web': 'org-web', 'superadmin-web': 'sa-web' };
 
-  var gallery = document.getElementById('gallery');
+  var gallery = document.getElementById('galleryGrid');
   var shots = [];
   // Interleave so "All" view looks varied but grouped nicely: list mobile groups then web
   GROUPS.forEach(function (g) {
