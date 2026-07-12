@@ -187,7 +187,7 @@ p { margin: 0; }
   background: #0d0b1a; padding: 11px; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,.08);
 }
 .phone::before { content:""; position:absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 92px; height: 22px; background:#0d0b1a; border-radius: 0 0 16px 16px; z-index: 3; }
-.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 32px; }
+.phone img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 32px; }
 .phone.p-main { z-index: 2; }
 .phone.p-side { position: absolute; width: 210px; }
 .phone.p-left { left: -6%; transform: rotate(-9deg) translateY(28px) scale(.86); opacity: .92; z-index: 1; }
@@ -234,6 +234,38 @@ p { margin: 0; }
 
 .media-frame { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-lg); background: var(--card); }
 .media-frame img { width: 100%; }
+
+/* ---------- Platform ecosystem ---------- */
+.eco-section { background:
+  radial-gradient(1100px 500px at 85% -10%, color-mix(in srgb, var(--brand-2) 12%, transparent), transparent 60%),
+  radial-gradient(900px 500px at 0% 110%, color-mix(in srgb, var(--mint) 14%, transparent), transparent 55%),
+  var(--paper); }
+.eco-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.eco-card {
+  grid-column: span 2; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
+  overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s; display: flex; flex-direction: column;
+}
+.eco-card.wide { grid-column: span 3; }
+.eco-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: color-mix(in srgb, var(--brand-2) 38%, var(--line)); }
+.eco-shot { overflow: hidden; background: linear-gradient(160deg, var(--brand-softer), var(--card-2)); display: flex; justify-content: center; }
+.eco-shot img { transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.eco-card:hover .eco-shot img { transform: scale(1.05); }
+.phone-shot { padding: 26px 26px 0; }
+.phone-shot img { width: 74%; border-radius: 20px 20px 0 0; box-shadow: 0 -8px 30px -12px rgba(53,37,205,.4); border: 1px solid var(--line); border-bottom: none; object-fit: cover; object-position: top; max-height: 340px; }
+.web-shot { padding: 26px 26px 0; }
+.web-shot img { width: 100%; border-radius: 12px 12px 0 0; border: 1px solid var(--line); border-bottom: none; box-shadow: 0 -8px 30px -12px rgba(53,37,205,.35); object-fit: cover; object-position: top; max-height: 300px; }
+.eco-body { padding: 22px 24px 26px; }
+.eco-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.eco-badge { font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--brand-2); background: var(--brand-soft); padding: 5px 12px; border-radius: 100px; }
+.eco-badge.alt { color: var(--teal); background: color-mix(in srgb, var(--mint) 22%, transparent); }
+.eco-num { font-size: 1.1rem; font-weight: 900; color: var(--muted-2); letter-spacing: -.02em; }
+.eco-card h3 { font-size: 1.22rem; }
+.eco-card .eco-body p { color: var(--muted); margin-top: 8px; font-size: .93rem; }
+@media (max-width: 900px) {
+  .eco-grid { grid-template-columns: 1fr 1fr; }
+  .eco-card, .eco-card.wide { grid-column: span 1; }
+}
+@media (max-width: 560px) { .eco-grid { grid-template-columns: 1fr; } .eco-card, .eco-card.wide { grid-column: span 1; } }
 
 /* ---------- Why / feature cards ---------- */
 .grid-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }

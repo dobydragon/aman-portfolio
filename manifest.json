@@ -1,0 +1,12 @@
+{
+  "name": "Aman — Multilingual Community & Support Platform",
+  "short_name": "Aman",
+  "description": "A multilingual (12-language) SaaS platform connecting refugees and newcomers with organizations, activities, community and human support. Built with Flutter + Firebase across five apps.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FCFBFF",
+  "theme_color": "#3525CD",
+  "icons": [
+    { "src": "icons/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
